@@ -1,8 +1,8 @@
 {
-  "name": "js-type",
-  "version": "0.0.1",
+  "name": "@necho/js-type",
+  "version": "1.0.2",
   "description": "A javascript type check tool",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
