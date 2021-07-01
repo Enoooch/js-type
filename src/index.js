@@ -3,7 +3,7 @@ var types = ['String', 'Array', 'Number', 'Object', 'Boolean'];
 
 for (var i = 0, type; type = types[i++];) {
   (function(type) {
-    is[type.toLowerCase()] = function(obj) {
+    is[type.toLowerCase()] = is['is' + type] = function(obj) {
       return Object.prototype.toString.call(obj) === '[object ' + type + ']';
     }
   })(type)
