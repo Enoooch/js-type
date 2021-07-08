@@ -11,6 +11,10 @@ for (var i = 0, type; type = types[i++];) {
   })(type)
 };
 
+is['null'] = is['nil'] = function (value) {
+  return value === null;
+};
+
 // For CommonJS export support
 module.exports = is;
 module.exports.default = is;
