@@ -15,6 +15,10 @@ is['null'] = is['nil'] = function (value) {
   return value === null;
 };
 
+is.undefined = is.undef = function (value) {
+  return value === undefined;
+};
+
 // For CommonJS export support
 module.exports = is;
 module.exports.default = is;
