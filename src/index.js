@@ -31,6 +31,11 @@ is['true'] = function (value) {
   return is.bool(value) && value === true;
 };
 
+is['function'] = is.fn = function (value) {
+  var str = toStr.call(value);
+  return str === '[object Function]' || str === '[object GeneratorFunction]' || str === '[object AsyncFunction]';
+};
+
 // For CommonJS export support
 module.exports = is;
 module.exports.default = is;
