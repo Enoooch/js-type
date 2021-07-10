@@ -23,6 +23,14 @@ is.defined = function (value) {
   return typeof value !== 'undefined';
 };
 
+is['false'] = function (value) {
+  return is.bool(value) && value === false;
+};
+
+is['true'] = function (value) {
+  return is.bool(value) && value === true;
+};
+
 // For CommonJS export support
 module.exports = is;
 module.exports.default = is;
