@@ -16,7 +16,11 @@ is['null'] = is['nil'] = function (value) {
 };
 
 is.undefined = is.undef = function (value) {
-  return value === undefined;
+  return typeof value === 'undefined';
+};
+
+is.defined = function (value) {
+  return typeof value !== 'undefined';
 };
 
 // For CommonJS export support
