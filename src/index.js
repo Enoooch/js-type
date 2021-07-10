@@ -1,7 +1,7 @@
 var toStr = Object.prototype.toString;
 
 var is = {};
-var types = ['String', 'Array', 'Number', 'Object', 'Boolean', 'Symbol'];
+var types = ['String', 'Array', 'Number', 'Object', 'Boolean', 'Date', 'Symbol'];
 
 for (var i = 0, type; type = types[i++];) {
   (function(type) {
