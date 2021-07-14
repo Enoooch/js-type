@@ -5,7 +5,7 @@ var types = ['String', 'Array', 'Number', 'Object', 'Boolean', 'Date', 'Symbol']
 
 for (var i = 0, type; type = types[i++];) {
   (function(type) {
-    is[type.toLowerCase()] = is['is' + type] = function(obj) {
+    is[type.toLowerCase()] = function(obj) {
       return toStr.call(obj) === '[object ' + type + ']';
     }
   })(type)
@@ -51,6 +51,14 @@ function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+var semanticIs = {}
+
+for (const key in is) {
+  if (Object.hasOwnProperty.call(is, key)) {
+    semanticIs['is' + capitalize(key)] = is[key];
+  }
+}
+
 // For CommonJS export support
-module.exports = is;
+module.exports = semanticIs;
 module.exports.default = is;
