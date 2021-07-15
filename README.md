@@ -4,6 +4,8 @@
 
 ```js
 is.array([]) //=> true
+
+isNumber('') //=> false
 ```
 
 ## Installation
@@ -25,7 +27,7 @@ $ yarn add @necho/js-type
 Commonjs usage
 
 ```js
-const is = require('@necho/js-type');
+const is = require('@necho/js-type').default;
 
 is.number(7) //=> true
 ```
@@ -48,12 +50,26 @@ isArray('') //=> false
 
 ### is.{method}
 
+*Basic*
 **.string(value)**
-
 **.number(value)**
-
-**.boolean(value)**
-
 **.array(value)**
-
 **.object(value)**
+**.date(value)**
+**.symbol(value)**
+
+*Boolean*
+**.boolean(value)**
+**.false(value)**
+**.true(value)**
+
+*Nullish*
+**.null(value) / .nil(value)**
+**.undefined(value) / .undef(value)**
+**.defined(value)**
+
+*Function*
+**.function(value)**
+**.normalFunction(value)**
+**.generatorFunction(value)**
+**.asyncFunction(value)**
