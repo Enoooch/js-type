@@ -51,25 +51,56 @@ isArray('') //=> false
 ### is.{method}
 
 *Basic*
+
 **.string(value)**
+
 **.number(value)**
+
+**.boolean(value)**
+
 **.array(value)**
+
 **.object(value)**
+
 **.date(value)**
+
 **.symbol(value)**
 
+
 *Boolean*
-**.boolean(value)**
+
 **.false(value)**
+
 **.true(value)**
 
+
+*Number*
+
+**.infinite(value)**
+
+**.nan(value)**
+
+**.even(value)**
+
+**.odd(value)**
+
+
 *Nullish*
+
 **.null(value) / .nil(value)**
+
 **.undefined(value) / .undef(value)**
+
 **.defined(value)**
 
+
 *Function*
+
 **.function(value)**
+
 **.normalFunction(value)**
+
 **.generatorFunction(value)**
+
 **.asyncFunction(value)**
+
