@@ -11,6 +11,22 @@ for (var i = 0, type; type = types[i++];) {
   })(type)
 };
 
+is.infinite = function (value) {
+  return value === Infinity || value === -Infinity;
+};
+
+is.nan = function (value) {
+  return !is.number(value) || value !== value;
+};
+
+is.even = function (value) {
+  return is.infinite(value) || (is.number(value) && value === value && value % 2 === 0);
+};
+
+is.odd = function (value) {
+  return is.infinite(value) || (is.number(value) && value === value && value % 2 !== 0);
+};
+
 is['null'] = is['nil'] = function (value) {
   return value === null;
 };
