@@ -1,6 +1,6 @@
 {
   "name": "@necho/js-type",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A javascript type check tool",
   "main": "lib/index.js",
   "repository": {
