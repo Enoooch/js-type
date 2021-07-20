@@ -2,7 +2,7 @@
   "name": "@necho/js-type",
   "version": "1.0.5",
   "description": "A javascript type check tool",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Enoooch/js-type.git"
